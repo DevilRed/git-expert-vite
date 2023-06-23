@@ -8,7 +8,10 @@ export const AddCategory = ({ setCategories }) => {
   }
   const onSubmit = (event) => {
     event.preventDefault();
+    if(inputValue.trim().length <= 1) return;
+
     setCategories(categories => [...categories, inputValue]);// using callback due conserv old cats
+    setInputValue('');
   }
   return (
     <form onSubmit={ onSubmit }>
