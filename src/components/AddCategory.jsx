@@ -10,7 +10,6 @@ export const AddCategory = ({ onNewCategory }) => {
     event.preventDefault();
     if(inputValue.trim().length <= 1) return;
 
-    // setCategories(categories => [...categories, inputValue]);// using callback due conserv old cats
     onNewCategory(inputValue.trim());
     setInputValue('');
   }
