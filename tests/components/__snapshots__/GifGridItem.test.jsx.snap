@@ -7,7 +7,7 @@ exports[`GifGridItem > should be match with snapshot 1`] = `
   >
     <img
       alt="some"
-      src="someUrl"
+      src="http://some-url/lala"
     />
     <p>
       some
