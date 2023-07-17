@@ -18,6 +18,23 @@ describe('GifGrid', () => {
 	});
 
 	it('should display items while fetching images using useFetchGifs', () => {
-		//
+		const gifs = [
+				{
+					id: 'xyz',
+					title: 'Bart',
+					url: 'https://localhost/bart.jpg'
+				},
+				{
+					id: '123',
+					title: 'Lisa',
+					url: 'https://localhost/lisa.jpg'
+				}
+			];
+		useFetchGifs.mockReturnValue({
+			data: gifs,
+			loading: false
+		});
+		render(<GifGrid category={ category } />);
+		expect(screen.getAllByRole('img').length).toBe(2);
 	});
 })
